@@ -23,5 +23,11 @@
 
     ?>
 
+    <div id="page" class="site">
+        <header id='masthead' class='site-header' role='banner'>
+            <?php get_template_part('template-parts/header/nav'); ?>
 
-    <header> This is header</header>
+
+        </header>
+
+        <div id="content" class="site-content">
