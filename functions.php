@@ -2,6 +2,13 @@
 
 // @package Unisus
 
+// Defining directory path 
+if (!defined('UNISUS_DIR_PATH')) {
+    define('UNISUS_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+require_once UNISUS_DIR_PATH . '/inc/helpers/autoloader.php';
+
 function unisus_enqueue_scripts()
 {
     // Registering styles 

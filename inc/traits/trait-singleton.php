@@ -1,5 +1,7 @@
 <?php
 
+namespace Unisus_Theme\Inc\Traits;
+
 trait singleton
 {
     public function __construct()
