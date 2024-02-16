@@ -27,6 +27,24 @@ class UNISUS_THEME
 
     public function setup_theme()
     {
+        // Adding site title dynamically
         add_theme_support('title-tag');
+
+        //  Adding custom logo in admin custom sidebars.
+        add_theme_support('custom-logo', [
+            'header-text' => ['site-title', 'site-description'],
+            'height' => 100,
+            'width' => 400,
+            'flex-height' => true,
+            'flex-width' => true
+        ]);
+
+        // Adding custom background
+        add_theme_support('custom-background', [
+            'default-color' => 'fff',
+            'default-image' => '',
+            'default-repeat' => 'no-repeat',
+        ]);
+
     }
 }
