@@ -46,5 +46,11 @@ class UNISUS_THEME
             'default-repeat' => 'no-repeat',
         ]);
 
+        // Adding post thumbnail 
+        add_theme_support('post-thumbnails');
+
+        // Selective refresh 
+        add_theme_support('customize-selective-refresh-widgets');
+
     }
 }
