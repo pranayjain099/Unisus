@@ -1,6 +1,6 @@
 <?php
 
-namespace Unisus_Theme\Inc\Traits;
+namespace UNISUS_THEME\Inc\Traits;
 
 trait singleton
 {

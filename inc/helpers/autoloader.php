@@ -5,7 +5,7 @@
  * @package Unisus
  */
 
-namespace Unisus_Theme\Inc\Helpers;
+namespace UNISUS_THEME\Inc\Helpers;
 
 /**
  * Auto loader function.
@@ -17,7 +17,7 @@ namespace Unisus_Theme\Inc\Helpers;
 function autoloader($resource = '')
 {
     $resource_path = false;
-    $namespace_root = 'Unisus_Theme\\';
+    $namespace_root = 'UNISUS_THEME\\';
     $resource = trim($resource, '\\');
 
     if (empty($resource) || strpos($resource, '\\') === false || strpos($resource, $namespace_root) !== 0) {
