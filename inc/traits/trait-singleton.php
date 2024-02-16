@@ -25,7 +25,7 @@ trait singleton
 
             // if any plugin want to hook at this point 
 
-            do_action(sprintf('unisus_theme_singleton_init%s'), $class_Name);
+            do_action(sprintf('unisus_theme_singleton_init%s', $class_Name));
         }
 
         return $instance[$class_Name];

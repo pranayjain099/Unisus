@@ -15,6 +15,7 @@ if (!defined('UNISUS_DIR_URI')) {
 
 require_once UNISUS_DIR_PATH . '/inc/helpers/autoloader.php';
 
+// Autoloaders will automatically load the class when the class is instanceated or when the obj of that class is created
 function unisus_get_theme_instance()
 {
     // creating object of the class UNISUS_THEME , we created object here so that we can add functionality
