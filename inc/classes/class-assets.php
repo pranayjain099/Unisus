@@ -14,15 +14,14 @@ class Assets
     use singleton;
     protected function __construct()
     {
-        //load class
+        //load classes
         $this->setup_hooks();
     }
 
     protected function setup_hooks()
     {
-        /**
-         * Actions.
-         */
+        //Actions
+
         add_action('wp_enqueue_scripts', [$this, 'register_styles']);
         add_action('wp_enqueue_scripts', [$this, 'register_scripts']);
     }

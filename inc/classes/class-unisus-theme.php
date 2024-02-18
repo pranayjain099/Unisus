@@ -12,8 +12,10 @@ class UNISUS_THEME
 
     protected function __construct()
     {
-        // load class
+        // load classes
         Assets::getInstance();
+        Menus::getInstance();
+
         $this->setup_hooks();
     }
 
@@ -51,6 +53,30 @@ class UNISUS_THEME
 
         // Selective refresh 
         add_theme_support('customize-selective-refresh-widgets');
+
+        // Automatic feed link
+        add_theme_support('automatic-feed-links');
+
+        // HTML5 
+        add_theme_support('html5', [
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+            'script',
+            'style',
+        ]);
+
+        add_theme_support('wp-block-styles');
+
+        add_theme_support('align-wide');
+
+        global $content_width;
+        if (!isset($content_width)) {
+            $content_width = 1240;
+        }
+
 
     }
 }

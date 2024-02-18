@@ -50,3 +50,12 @@
         </form>
     </div>
 </nav>
+<?php
+//display menu in the frontend
+wp_nav_menu(
+    [
+        'theme-location' => 'unisus-header-menu',
+        'container_class' => ''
+    ]
+);
+?>
