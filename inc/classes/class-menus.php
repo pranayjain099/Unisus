@@ -44,7 +44,6 @@ class Menus
         // Return menu_id if not empty else don't return anything.
         return !empty($menu_id) ? $menu_id : '';
 
-
     }
 
     public function get_child_menu_items($menu_array, $parent_id)

@@ -30,7 +30,7 @@ $header_menus = wp_get_nav_menu_items($header_menu_id);
                 <?php
 
                 foreach ($header_menus as $menu_item) {
-                    // checking of menu_item contains menu_item_parent
+                    // if doesnot contain menu_item_parent it means thats parent menu 
                     if (!$menu_item->menu_item_parent) {
                         $child_menu_items = $class_menu->get_child_menu_items($header_menus, $menu_item->ID);
 
