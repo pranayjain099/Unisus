@@ -8,7 +8,6 @@ namespace UNISUS_THEME\Inc;
 
 use UNISUS_THEME\Inc\Traits\singleton;
 
-
 class Menus
 {
     use singleton;
