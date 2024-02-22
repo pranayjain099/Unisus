@@ -15,7 +15,7 @@ class UNISUS_THEME
         // load classes
         Assets::getInstance();
         Menus::getInstance();
-
+        Meta_Boxes::getInstance();
         $this->setup_hooks();
     }
 
