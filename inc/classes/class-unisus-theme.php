@@ -77,6 +77,8 @@ class UNISUS_THEME
             $content_width = 1240;
         }
 
+        add_image_size('featured-thumbnail', 350, 233, true);
+
 
     }
 }
