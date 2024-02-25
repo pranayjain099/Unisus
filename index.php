@@ -28,7 +28,7 @@ get_header();
                 ?>
                 <!-- adding grid -->
 
-                <div class="row" style="border: 1px solid yellow;">
+                <div class="row">
                     <?php
                     $index = 0;
                     $no_of_columns = 3;
@@ -38,7 +38,7 @@ get_header();
                         //start div
                         if (0 === $index % $no_of_columns) {
                             ?>
-                            <div class="col-lg-4 col-md-6 col-sm-12" style="border: 1px solid red;">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
                                 <?php
                         }
 

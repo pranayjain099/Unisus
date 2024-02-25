@@ -33,7 +33,7 @@
             <?php
 
         }
-        // if user is not logged in 
+        // if user is not logged-in 
         elseif (is_search()) {
             ?>
             <p>

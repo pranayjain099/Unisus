@@ -44,13 +44,20 @@ class Meta_Boxes
     public function custom_meta_box_html($post)
     {
         $value = get_post_meta($post->ID, '_hide_page_title', true);
+
+        /**
+         * Creating nonce for verification
+         */
+
+        wp_nonce_field(plugin_basename(__FILE__), 'hide_title_meta_box_nonce_name');
+
         ?>
         <!-- This is a label for the select box -->
         <label for="Unisus-field">
             <?php esc_html_e('Hide the page title', 'Unisus'); ?>
         </label>
 
-        <select name="Unisus_field" id="Unisus-field" class="postbox">
+        <select name="Unisus_hide_title_field" id="Unisus-field" class="postbox">
             <!-- This is the default option with an empty value -->
             <option value="">
                 <?php esc_html_e('Select', 'Unisus'); ?>
@@ -65,6 +72,35 @@ class Meta_Boxes
             </option>
         </select>
         <?php
+    }
+
+    public function save_post_meta_data($post_id)
+    {
+        /**
+         * When the post is saved or updated we will verify the nonce 
+         * check if the current user is authorized
+         */
+
+        //checking if the user can edit a post
+        if (!current_user_can('edit_post', $post_id)) {
+            return;
+        }
+
+        /**
+         * check if the nonce value we recieved is the same we created
+         */
+
+        if (!isset($_POST['hide_title_meta_box_nonce_name']) || !wp_verify_nonce(plugin_basename(__FILE__), $_POST['hide_title_meta_box_nonce_name'])) {
+            return;
+        }
+
+        if (array_key_exists('Unisus_hide_title_field', $_POST)) {
+            update_post_meta(
+                $post_id,
+                '_hide_page_title', //key for the metabox
+                $_POST['Unisus_hide_title_field'] //value for the metabox
+            );
+        }
     }
 
 }

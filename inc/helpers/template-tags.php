@@ -16,7 +16,7 @@ function get_the_post_custom_thumbnail($post_id, $size = 'featured-thumbnail', $
         $post_id = get_the_ID();
     }
 
-    //if the id is present 
+    //if the id is present  
     if (has_post_thumbnail($post_id)) {
         $default_atttribute = [
             'loading' => 'lazy'
@@ -42,4 +42,6 @@ function the_post_custom_thumbnail($post_id, $size = 'featured-thumbnail', $addi
 {
     echo get_the_post_custom_thumbnail($post_id, $size, $additional_attributes);
 }
+
+
 
