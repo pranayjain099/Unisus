@@ -37,11 +37,15 @@
             )
 
         );
-
+        //adding link for paginated pages
+        wp_link_pages([
+            'before' => '<div class = "page-links">' . esc_html('Pages:', 'Unisus'),
+            'after' => '</div>',
+        ]);
     } else {
         // if you are in the blog page then show the excerpt
         Unisus_the_excerpt(100);
-
+        echo Unisus_read_more();
     }
     ?>
 </div>

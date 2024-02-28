@@ -102,4 +102,21 @@ function Unisus_the_excerpt($trim_character_count = 0)
     echo $excerpt . "[...]";
 }
 
+//function to add read more in excerpt
+function Unisus_read_more($more = '')
+{
+    //checks if the page is blog page or not
+    if (!is_single()) {
+        ?>
+        <?php
+        $more = sprintf(
+            '<div class="read-more" style = "text-align:center;"><button class ="mt-4 btn btn-info"><a class = "Unisus-read-more text-white" href = "%1$s">%2$s</a></button></div>',
+            get_permalink(get_the_ID()),
+            __('Read More', 'Unisus')
+        );
+    ?>
+    <?php
+    }
 
+    return $more;
+}
