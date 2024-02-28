@@ -35,7 +35,8 @@ class Meta_Boxes
                 'hide-page-title', //unique id
                 __('<p>Hide page title</p>', 'Unisus'), //Box title
                 [$this, 'custom_meta_box_html'], //content callback
-                'post', // Post type
+                $screen, // Post type
+                'side',
 
             );
         }
@@ -43,13 +44,15 @@ class Meta_Boxes
 
     public function custom_meta_box_html($post)
     {
-        $value = get_post_meta($post->ID, '_hide_page_title', true);
-
         /**
          * Creating nonce for verification
          */
 
         wp_nonce_field(plugin_basename(__FILE__), 'hide_title_meta_box_nonce_name');
+
+        // retrieving the value for the specified post id 
+        $value = get_post_meta($post->ID, '_hide_page_title', true);
+
 
         ?>
         <!-- This is a label for the select box -->

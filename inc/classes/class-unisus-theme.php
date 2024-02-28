@@ -77,6 +77,7 @@ class UNISUS_THEME
             $content_width = 1240;
         }
 
+        // Register image sizes
         add_image_size('featured-thumbnail', 350, 233, true);
 
 
