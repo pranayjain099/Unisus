@@ -71,9 +71,35 @@ function Unisus_posted_on()
 function Unisus_posted_by()
 {
     $byline = sprintf(
-        esc_html_x(' by %s', 'post author', 'Cornus'),
+        esc_html_x(' by %s', 'post author', 'Unisus'),
         '<span class = "author vcard"><a href = "' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
     );
 
     echo '<span class = "byline text-secondary">' . $byline . '</span>';
 }
+
+//function to cut down the excerpt character
+function Unisus_the_excerpt($trim_character_count = 0)
+{
+    // If post doesn't have excerpt or trim character count is 0 then simply use the_excerpt()
+
+    if (!has_excerpt() || 0 == $trim_character_count) {
+        the_excerpt();
+        return;
+    }
+
+    // if the excerpt is available or user has passed character count
+
+    // remove all the unnecessary html tags and get the excerpt
+    $excerpt = wp_strip_all_tags(get_the_excerpt());
+
+    // start from index 0 and go till charcter count and trim rest of it (if trim count is 250 then $excerpt will contain  250 words from start).
+    $excerpt = substr($excerpt, 0, $trim_character_count);
+
+    // remove the last word as if you set count to 200 and till last word is hello and till hel 200 words are completed then it won't look good.
+    $excerpt = substr($excerpt, 0, strrpos($excerpt, " "));
+
+    echo $excerpt . "[...]";
+}
+
+
