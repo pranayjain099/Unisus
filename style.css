@@ -27,3 +27,9 @@ img {
 .updated:not(.published) {
     display: none;
 }
+
+/* Nav item */
+
+.nav-item:hover .dropdown-menu:not(.show) {
+    display: block;
+}
