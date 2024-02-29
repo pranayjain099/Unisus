@@ -44,8 +44,10 @@
         ]);
     } else {
         // if you are in the blog page then show the excerpt
-        Unisus_the_excerpt(100);
+        Unisus_the_excerpt(200);
+        printf('<br>');
         echo Unisus_read_more();
     }
+
     ?>
 </div>
