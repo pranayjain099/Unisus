@@ -8,12 +8,13 @@ $the_post_id = get_the_ID();
 $hide_title = get_post_meta($the_post_id, '_hide_page_title', true);
 
 //fetching the hide class
-$hiding_class = !empty($hide_title) && 'yes' === $hide_title ? 'hide' : '';
+$heading_class = !empty($hide_title) && 'yes' === $hide_title ? 'hide' : '';
 $has_post_thumbnail = get_the_post_thumbnail($the_post_id);
 ?>
 
 <header class="entry-header">
     <?php
+
     //display featured image
     if ($has_post_thumbnail) {
         ?>
@@ -27,6 +28,7 @@ $has_post_thumbnail = get_the_post_thumbnail($the_post_id);
                         'sizes' => '(max-width:350px) 350px , 233px',
                         'class' => 'attachment-featured-large size-featured-image'
                     ]
+
                 ) ?>
             </a>
         </div>
@@ -38,7 +40,7 @@ $has_post_thumbnail = get_the_post_thumbnail($the_post_id);
     if (is_single() || is_page()) {
         //In the post page
         printf(
-            '<h1 class = "page-title text-dark %1$s">%2$s</h1>',
+            '<h1 class = "page-title mt-4 text-dark %1$s" style = "text-align : center">%2$s</h1>',
             esc_attr($heading_class),
             wp_kses_post(get_the_title())
         );
