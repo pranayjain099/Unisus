@@ -61,6 +61,8 @@ get_header();
             get_template_part('template-parts/content-none');
         endif;
 
+        Unisus_pagination();
+
         ?>
     </main>
 </div>
