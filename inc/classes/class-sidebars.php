@@ -13,7 +13,7 @@ use Unisus_THEME\Inc\Traits\singleton;
 class Sidebars
 {
     use singleton;
-    protected function __construct()
+    public function __construct()
     {
         //load class
         $this->setup_hooks();

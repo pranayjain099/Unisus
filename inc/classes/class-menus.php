@@ -11,7 +11,7 @@ use UNISUS_THEME\Inc\Traits\singleton;
 class Menus
 {
     use singleton;
-    protected function __construct()
+    public function __construct()
     {
         //load class
         $this->setup_hooks();

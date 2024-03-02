@@ -10,7 +10,7 @@ class UNISUS_THEME
 {
     use singleton;
 
-    protected function __construct()
+    public function __construct()
     {
         // load classes
         Assets::getInstance();

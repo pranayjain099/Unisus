@@ -12,7 +12,7 @@ use UNISUS_THEME\Inc\Traits\singleton;
 class Assets
 {
     use singleton;
-    protected function __construct()
+    public function __construct()
     {
         //load classes
         $this->setup_hooks();
