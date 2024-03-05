@@ -5,9 +5,9 @@
  * @package Unisus
  */
 
-namespace Unisus_THEME\Inc;
+namespace UNISUS_THEME\Inc;
 
-use Unisus_THEME\Inc\Traits\singleton;
+use UNISUS_THEME\Inc\Traits\singleton;
 
 
 class Sidebars

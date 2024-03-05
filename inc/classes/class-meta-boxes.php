@@ -47,12 +47,10 @@ class Meta_Boxes
         /**
          * Creating nonce for verification
          */
-
         wp_nonce_field(plugin_basename(__FILE__), 'hide_title_meta_box_nonce_name');
 
         // retrieving the value for the specified post id 
         $value = get_post_meta($post->ID, '_hide_page_title', true);
-
 
         ?>
         <!-- This is a label for the select box -->
