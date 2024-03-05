@@ -6,9 +6,31 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["wordpress","themes"],
+  "keywords": [
+    "wordpress",
+    "themes"
+  ],
   "author": "Pranay Jain",
   "license": "MIT",
   "private": true,
-  "browserlist": ["defaults"]
+  "browserlist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.10.0",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "cssnano": "^6.0.5",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "style-loader": "^3.3.4",
+    "uglify-js": "^3.17.4",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
 }
