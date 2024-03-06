@@ -40,7 +40,7 @@ class Assets
     public function register_scripts()
     {
         // Registering scripts 
-        wp_register_script('main-js', UNISUS_DIR_URI . '/assets/main.js', [], filemtime(UNISUS_DIR_PATH . '/assets/main.js'), true);
+        wp_register_script('main-js', UNISUS_DIR_URI . '/assets/src/js/main.js', [], filemtime(UNISUS_DIR_PATH . '/assets/src/js/main.js'), true);
         wp_register_script('bootstrap-js', UNISUS_DIR_URI . '/assets/src/Library/js/bootstrap.min.js', ['jquery'], false, true);
 
         // Enqueue scripts
