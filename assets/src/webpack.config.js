@@ -39,13 +39,26 @@ const rules = [
     {
         // Rules for css file
 
-        // Saas files 
+        // Saas files
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
-    }
+    },
+
+
 ];
 
+const plugins = (argv) => {
+    //plugin for cleaning unused assets and output files on rebuild
+    new CleanWebpackPlugin({
+        cleanStaleWebpackAssets: ('production' === argv.mode)
+    }),
+
+        //plugin for extracting css after bundling of files
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].css'
+        })
+};
 
 module.exports = (env, argv) => ({
 
@@ -60,4 +73,6 @@ module.exports = (env, argv) => ({
         rules: rules,
     },
 
+    // setup webpack plugins 
+    plugins: plugins(argv),
 });
