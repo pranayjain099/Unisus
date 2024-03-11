@@ -41,3 +41,12 @@ img {
     background-color: gray;
     color: #fff;
 }
+
+.body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+#calendar_wrap #wp-calendar {
+    width: 50%;
+    margin: auto;
+}
