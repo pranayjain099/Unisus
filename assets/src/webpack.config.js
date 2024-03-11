@@ -45,6 +45,22 @@ const rules = [
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
     },
 
+    {       // Rules for images and files
+        test: /\.(png|jpg|svg|jpeg|gif|ico)$/,
+        use: [
+            {
+                loader: 'file-loader',
+                Options: {
+                    name: '[path][name].[ext]',
+                    // If the environment is production then go just one step outside and if its development then go 2 steps outside.
+                    publicPath: 'production' === process.env.NODE_ENV ? '../' : '../..',
+                },
+            },
+        ],
+    }
+];
+
+
 
 ];
 
@@ -69,10 +85,14 @@ module.exports = (env, argv) => ({
     output: output,
 
     devtool: 'source-map',
+
+    // Setting the module rules
     module: {
         rules: rules,
     },
 
     // setup webpack plugins 
     plugins: plugins(argv),
+
+
 });
