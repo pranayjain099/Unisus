@@ -15,32 +15,32 @@ if (!defined('UNISUS_DIR_URI')) {
 
 // Defining constant for build directory
 if (!defined('UNISUS_BUILD_URI')) {
-    define('UNISUS_BUILD_URI', untrailingslashit(get_template_directory_uri()) . '/build');
+    define('UNISUS_BUILD_URI', untrailingslashit(get_template_directory_uri()) . '/assets/build');
 }
 
 // Defining constant for build JS directory
 if (!defined('UNISUS_BUILD_JS_URI')) {
-    define('UNISUS_BUILD_JS_URI', untrailingslashit(get_template_directory_uri()) . '/build/js');
+    define('UNISUS_BUILD_JS_URI', untrailingslashit(get_template_directory_uri()) . '/assets/build/js');
 }
 
 // Defining constantfor build  directory path 
 if (!defined('UNISUS_BUILD_JS_DIR_PATH')) {
-    define('UNISUS_BUILD_JS_DIR_PATH', untrailingslashit(get_template_directory()) . '/build/js');
+    define('UNISUS_BUILD_JS_DIR_PATH', untrailingslashit(get_template_directory()) . '/assets/build/js');
 }
 
 // Defining constant for build IMG directory
 if (!defined('UNISUS_BUILD_IMG_URI')) {
-    define('UNISUS_BUILD_IMG_URI', untrailingslashit(get_template_directory_uri()) . '/build/src/img');
+    define('UNISUS_BUILD_IMG_URI', untrailingslashit(get_template_directory_uri()) . '/assets/build/src/img');
 }
 
 // Defining constant for build CSS directory
 if (!defined('UNISUS_BUILD_CSS_URI')) {
-    define('UNISUS_BUILD_CSS_URI', untrailingslashit(get_template_directory_uri()) . '/build/css');
+    define('UNISUS_BUILD_CSS_URI', untrailingslashit(get_template_directory_uri()) . '/assets/build/css');
 }
 
 // Defining constantfor build  directory path 
 if (!defined('UNISUS_BUILD_CSS_DIR_PATH')) {
-    define('UNISUS_BUILD_CSS_DIR_PATH', untrailingslashit(get_template_directory()) . '/build/css');
+    define('UNISUS_BUILD_CSS_DIR_PATH', untrailingslashit(get_template_directory()) . '/assets/build/css');
 }
 
 require_once UNISUS_DIR_PATH . '/inc/helpers/autoloader.php';
