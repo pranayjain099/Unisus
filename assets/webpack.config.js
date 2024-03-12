@@ -45,7 +45,7 @@ const rules = [
         // Saas files
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'scss-loader'],
     },
 
     {       // Rules for images and files
