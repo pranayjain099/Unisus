@@ -110,7 +110,7 @@ function Unisus_read_more($more = '')
         ?>
         <?php
         $more = sprintf(
-            '<div class="read-more" style = "text-align:center;"><button class ="mt-4 btn btn-info"><a class = "Unisus-read-more text-white" href = "%1$s">%2$s</a></button></div>',
+            '<div class="read-more" style = "text-align:center;"><a class = "Unisus-read-more text-white" href = "%1$s"><button class ="mt-4 btn btn-info">%2$s</button></a></div>',
             get_permalink(get_the_ID()),
             __('Read More', 'Unisus')
         );

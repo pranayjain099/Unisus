@@ -498,21 +498,82 @@ body.mce-content-body {
   margin: 15px;
 }
 
-blockquote, q {
+blockquote,
+q,
+blockquote.wp-block-quote {
   quotes: "" "";
   border-left: 4px solid #eeeeee;
   font-style: italic;
   margin: 0 0 30px 30px;
   padding-left: 16px;
+  background: transparent;
+  text-align: left;
 }
-blockquote::before, blockquote::after, q::before, q::after {
-  content: "";
+blockquote p,
+q p,
+blockquote.wp-block-quote p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+blockquote cite,
+blockquote .wp-block-quote__citation,
+q cite,
+q .wp-block-quote__citation,
+blockquote.wp-block-quote cite,
+blockquote.wp-block-quote .wp-block-quote__citation {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+blockquote p:last-of-type,
+q p:last-of-type,
+blockquote.wp-block-quote p:last-of-type {
+  margin-bottom: 0;
+}
+blockquote.is-large, blockquote.is-style-large,
+q.is-large,
+q.is-style-large,
+blockquote.wp-block-quote.is-large,
+blockquote.wp-block-quote.is-style-large {
+  margin: 0 auto;
+}
+
+/* Pull Quote
+--------------------------------------------- */
+.wp-block-pullquote {
+  border: none;
+  padding: 0;
+}
+.wp-block-pullquote blockquote {
+  border-left: 0;
+  border-top: 8px solid #eeeeee;
+  border-bottom: 8px solid #eeeeee;
+  padding: 16px 0;
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.wp-block-pullquote.alignleft blockquote, .wp-block-pullquote.alignright blockquote {
+  max-width: 100%;
 }
 
 img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
+}
+
+/* Image Support
+--------------------------------------------- */
+.wp-block-image.size-medium img, .wp-block-image.size-thumbnail img, .wp-block-image.is-resized img {
+  width: auto;
+}
+.wp-block-image figcaption {
+  text-align: left;
+  padding: 10px 0;
 }
 
 figure {
@@ -656,6 +717,20 @@ table {
   }
 }
 
+/* Button
+--------------------------------------------- */
+.wp-block-button .wp-block-button__link {
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 20px 24px;
+}
+.wp-block-button .wp-block-button__link:hover {
+  background: #cccccc;
+  text-decoration: none;
+}
+
 /*------------------------------------*\
     Form Fields
 \*------------------------------------*/
@@ -793,12 +868,43 @@ code {
   border-radius: 3px;
 }
 
+/* Separator
+--------------------------------------------- */
+.wp-block-separator,
 hr {
+  width: 100%;
   margin: 20px 0;
   border: 0;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff;
   box-sizing: content-box;
+}
+.wp-block-separator:not(.is-style-dots),
+hr:not(.is-style-dots) {
+  background-color: #eff3f6;
+  border: 0;
+  height: 1px;
+}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots),
+hr:not(.is-style-wide):not(.is-style-dots) {
+  width: 100%;
+  height: 4px;
+  background: transparent;
+}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots)::before,
+hr:not(.is-style-wide):not(.is-style-dots)::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background: #eff3f6;
+}
+.wp-block-separator.is-style-dots:before,
+hr.is-style-dots:before {
+  color: #eff3f6;
+  font-size: 18px;
+  letter-spacing: 12px;
+  padding-left: 12px;
 }
 
 /*-----------
@@ -827,6 +933,11 @@ object {
 /*---------------------------
       Icons
 ---------------------------*/
+#calendar_wrap #wp-calendar {
+  width: 50%;
+  margin: auto;
+}
+
 /* Entry meta */
 .updated:not(.published) {
   display: none;
