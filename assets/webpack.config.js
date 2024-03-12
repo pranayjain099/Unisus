@@ -45,7 +45,7 @@ const rules = [
         // Saas files
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'scss-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
     },
 
     {       // Rules for images and files
@@ -64,17 +64,17 @@ const rules = [
 ];
 
 
-const plugins = (argv) => {
-    //plugin for cleaning unused assets and output files on rebuild
+const plugins = (argv) => [    //plugin for cleaning unused assets and output files on rebuild
+
     new CleanWebpackPlugin({
         cleanStaleWebpackAssets: ('production' === argv.mode)
     }),
 
-        //plugin for extracting css after bundling of files
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
-        })
-};
+    //plugin for extracting css after bundling of files
+    new MiniCssExtractPlugin({
+        filename: 'css/[name].css'
+    })
+];
 
 module.exports = (env, argv) => ({
 

@@ -56,6 +56,19 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("../../src/img/jodhpur.jpg");
 
+/***/ }),
+
+/***/ "./src/sass/main.scss":
+/*!****************************!*\
+  !*** ./src/sass/main.scss ***!
+  \****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
 /***/ })
 
 /******/ 	});
@@ -136,9 +149,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _clock_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clock/index */ "./src/js/clock/index.js");
 /* harmony import */ var _clock_index__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_clock_index__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _img_jodhpur_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/jodhpur.jpg */ "./src/img/jodhpur.jpg");
+/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sass/main.scss */ "./src/sass/main.scss");
+/* harmony import */ var _img_jodhpur_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/jodhpur.jpg */ "./src/img/jodhpur.jpg");
 // This is the main js file , here we will include all the javascript files that will be required though out
 
+
+
+// Styles
 
 
 // images
