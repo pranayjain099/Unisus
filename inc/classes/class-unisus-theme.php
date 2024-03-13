@@ -83,5 +83,9 @@ class UNISUS_THEME
         add_image_size('featured-thumbnail', 350, 233, true);
 
 
+        // Adds callback for custom TinyMCE editor stylesheets.
+        add_editor_style('assets/build/css/editor.css');
+
+
     }
 }
