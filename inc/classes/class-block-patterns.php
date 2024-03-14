@@ -28,13 +28,11 @@ class Block_Patterns
     public function register_block_patterns()
     {
         if (function_exists('register_block_pattern')) {
+            /**
+             * Cover Pattern
+             */
+            $cover_content = $this->get_pattern_content('template-parts/patterns/cover');
 
-            ob_start();
-            // get_template_part will echo but ob_start will start buffering and will stop get_template_part to echo , ob_get_contents() will store the content and will store in varibable.
-            get_template_part('template-parts/patterns/cover');
-            $cover_content = ob_get_contents();
-
-            ob_end_clean();
 
             register_block_pattern(
                 'Unisus/cover',
@@ -56,6 +54,18 @@ class Block_Patterns
         }
     }
 
+    public function get_pattern_content($template_path)
+    {
+        ob_start();
+
+        get_template_part($template_path);
+
+        $pattern_content = ob_get_contents();
+
+        ob_end_clean();
+
+        return $pattern_content;
+    }
 
     // Registering block pattern categories
     public function register_block_patterns_categories()
