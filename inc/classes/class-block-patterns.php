@@ -51,6 +51,21 @@ class Block_Patterns
                 ]
             );
 
+            /**
+             * Two Column Pattern
+             */
+            $two_columns_content = $this->get_pattern_content('template-parts/patterns/two-columns');
+
+            register_block_pattern(
+                'Unisus/two-columns',
+                [
+                    'title' => __('Unisus Two Columns', 'Unisus'),
+                    'description' => __('Unisus two columns Block with heading and text', 'Unisus'),
+                    'categories' => ['two-columns'],
+                    'content' => $two_columns_content,
+                ]
+            );
+
         }
     }
 
@@ -66,6 +81,8 @@ class Block_Patterns
 
         return $pattern_content;
     }
+
+
 
     // Registering block pattern categories
     public function register_block_patterns_categories()
