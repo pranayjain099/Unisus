@@ -75,17 +75,24 @@ class UNISUS_THEME
 
         add_theme_support('align-wide');
 
-        global $content_width;
-        if (!isset($content_width)) {
-            $content_width = 1240;
-        }
-
         // Register image sizes
         add_image_size('featured-thumbnail', 350, 233, true);
 
 
         // Adds callback for custom TinyMCE editor stylesheets.
         add_editor_style('assets/build/css/editor.css');
+
+
+        //Remove the core block patterns
+        remove_theme_support('core-block-patterns');
+
+        global $content_width;
+        if (!isset($content_width)) {
+            $content_width = 1240;
+        }
+
+
+
 
 
     }
