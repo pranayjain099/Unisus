@@ -7,3 +7,4 @@ import '../sass/main.scss';
 
 // images
 import '../img/jodhpur.jpg';
+import '../img/patterns/cover.jpg';

@@ -6,24 +6,27 @@
 ?>
 
 
-<div class="wp-block-cover"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><img
-        class="wp-block-cover__image-background wp-image-119" alt=""
-        src="http://localhost:8080/Theme_1/wp-content/uploads/2024/03/yash-raut-z_zFPGX90mc-unsplash.jpg"
-        data-object-fit="cover" />
-    <div class="wp-block-cover__inner-container">
-        <h1 class="wp-block-heading has-text-align-center">Jodhpur</h1>
+<!-- wp:cover {"url":"<?php echo esc_url(UNISUS_BUILD_IMG_URI . '/patterns/cover.jpg') ?>","id":3854,"minHeight":640,"align":"full","className":"aquila-cover"} -->
+<div class="wp-block-cover alignfull has-background-dim aquila-cover"
+    style="background-image:url(<?php echo esc_url(UNISUS_BUILD_IMG_URI . '/patterns/cover.jpg') ?>);min-height:640px">
+    <div class="wp-block-cover__inner-container"><!-- wp:heading {"align":"center","level":1} -->
+        <h1 class="has-text-align-center has-white-color"><strong>Never let your memories be greater than your
+                dreams</strong></h1>
+        <!-- /wp:heading -->
 
-        <p class="has-text-align-center has-cyan-bluish-gray-color has-text-color has-link-color">Mehrangarh is a
-            historic fort located in Jodhpur, Rajasthan, India. It stands on a hilltop, rising about 122 meters above
-            the surrounding plains. The complex spans 1,200 acres</p>
+        <!-- wp:paragraph {"align":"center","textColor":"cyan-bluish-gray"} -->
+        <p class="has-text-align-center has-cyan-bluish-gray-color has-text-color">A mind that is stretched by a new
+            experience can never go back to its old dimensions.</p>
+        <!-- /wp:paragraph -->
 
-        <div class="wp-block-buttons alignfull">
-
-            <div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-background wp-element-button"
-                    style="border-radius:100px;background:linear-gradient(90deg,rgb(2,3,129) 0%,rgb(40,116,252) 97%)">Blogs</a>
-            </div>
-
+        <!-- wp:buttons {"align":"center"} -->
+        <div class="wp-block-buttons aligncenter">
+            <!-- wp:button {"textColor":"cyan-bluish-gray","className":"is-style-outline"} -->
+            <div class="wp-block-button is-style-outline"><a
+                    class="wp-block-button__link has-cyan-bluish-gray-color has-text-color">Blogs</a></div>
+            <!-- /wp:button -->
         </div>
-
+        <!-- /wp:buttons -->
     </div>
 </div>
+<!-- /wp:cover -->
