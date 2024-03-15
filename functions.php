@@ -18,6 +18,11 @@ if (!defined('UNISUS_BUILD_URI')) {
     define('UNISUS_BUILD_URI', untrailingslashit(get_template_directory_uri()) . '/assets/build');
 }
 
+// Defining constant for build path
+if (!defined('UNISUS_BUILD_PATH')) {
+    define('UNISUS_BUILD_PATH', untrailingslashit(get_template_directory_uri()) . '/assets/build');
+}
+
 // Defining constant for build JS directory
 if (!defined('UNISUS_BUILD_JS_URI')) {
     define('UNISUS_BUILD_JS_URI', untrailingslashit(get_template_directory_uri()) . '/assets/build/js');

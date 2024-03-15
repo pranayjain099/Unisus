@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('css-minimizer-webpack-plugin');
 const cssnano = require('cssnano');
 const TerserJSPlugin = require('terser-webpack-plugin');
+const DependancyExtractionWebpackPlugin = require('@wordpress/dependency-extraction-webpack-plugin');
 
 
 const JS_DIR = path.resolve(__dirname, 'src/js');
@@ -18,6 +19,7 @@ const entry = {
     main: JS_DIR + '/main.js',
     single: JS_DIR + '/single.js',
     editor: JS_DIR + '/editor.js',
+    blocks: JS_DIR + '/editor.js',
 };
 
 // output file
@@ -74,6 +76,11 @@ const plugins = (argv) => [    //plugin for cleaning unused assets and output fi
     //plugin for extracting css after bundling of files
     new MiniCssExtractPlugin({
         filename: 'css/[name].css'
+    })
+
+    new DependancyExtractionWebpackPlugin({
+        injectPolyfill: true, // for translation into the older version of browsers
+        combineAssets: true, // Used to combine assets, typically JavaScript and CSS files, into a single file during the build process.
     })
 ];
 

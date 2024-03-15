@@ -24,6 +24,7 @@ class Assets
 
         add_action('wp_enqueue_scripts', [$this, 'register_styles']);
         add_action('wp_enqueue_scripts', [$this, 'register_scripts']);
+
     }
 
     public function register_styles()
