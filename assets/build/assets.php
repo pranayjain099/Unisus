@@ -1,21 +1,22 @@
-<?php return array
-(
-    'js/main.js' => array(
-        'dependencies' => array('wp-polyfill'),
-        'version' => 'c75f2beafc1ae0028464'
-    ),
-    'js/single.js' => array(
-        'dependencies' => array('wp-polyfill'),
-        'version' => '30f4e021a9ed033b2ed9'
-    ),
+<?php return
+    array(
+        'js/main.js' => array(
+            'dependencies' => array('wp-polyfill'),
+            'version' => '534d9ebbe81770b03024'
+        ),
 
-    'js/editor.js' => array(
-        'dependencies' => array('wp-polyfill'),
-        'version' => 'beaa861542e2c25ebd34'
-    ),
+        'js/single.js' => array(
+            'dependencies' => array('wp-polyfill'),
+            'version' => 'dd9798df5057fe840949'
+        ),
 
-    'js/blocks.js' => array(
-        'dependencies' => array('wp-polyfill'),
-        'version' => '1cdb6baa9dc6fbe22b43'
-    )
-);
+        'js/editor.js' => array(
+            'dependencies' => array('wp-polyfill'),
+            'version' => '5cbe88119c8a37747ba8'
+        ),
+
+        'js/blocks.js' => array(
+            'dependencies' => array('wp-polyfill'),
+            'version' => 'b153ea7d02666af3cad9'
+        )
+    );

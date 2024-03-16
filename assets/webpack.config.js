@@ -19,7 +19,7 @@ const entry = {
     main: JS_DIR + '/main.js',
     single: JS_DIR + '/single.js',
     editor: JS_DIR + '/editor.js',
-    blocks: JS_DIR + '/editor.js',
+    blocks: JS_DIR + '/blocks.js',
 };
 
 // output file
