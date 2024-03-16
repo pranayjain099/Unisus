@@ -76,7 +76,7 @@ const plugins = (argv) => [    //plugin for cleaning unused assets and output fi
     //plugin for extracting css after bundling of files
     new MiniCssExtractPlugin({
         filename: 'css/[name].css'
-    })
+    }),
 
     new DependancyExtractionWebpackPlugin({
         injectPolyfill: true, // for translation into the older version of browsers

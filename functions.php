@@ -20,7 +20,7 @@ if (!defined('UNISUS_BUILD_URI')) {
 
 // Defining constant for build path
 if (!defined('UNISUS_BUILD_PATH')) {
-    define('UNISUS_BUILD_PATH', untrailingslashit(get_template_directory_uri()) . '/assets/build');
+    define('UNISUS_BUILD_PATH', untrailingslashit(get_template_directory()) . '/assets/build');
 }
 
 // Defining constant for build JS directory
