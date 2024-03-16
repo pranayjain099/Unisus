@@ -17,6 +17,7 @@ class UNISUS_THEME
         Menus::getInstance();
         Meta_Boxes::getInstance();
         Sidebars::getInstance();
+        Blocks::getInstance();
         Block_Patterns::getInstance();
 
         $this->setup_hooks();
@@ -87,7 +88,7 @@ class UNISUS_THEME
         remove_theme_support('core-block-patterns');
 
         global $content_width;
-        if (!isset($content_width)) {
+        if (!isset ($content_width)) {
             $content_width = 1240;
         }
 
