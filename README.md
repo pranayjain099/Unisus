@@ -30,5 +30,7 @@ What i learned during this project ?
 [recording-2024-05-01-12-16-44.webm](https://github.com/pranayjain099/Unisus/assets/109263743/fd092834-a419-4ac0-b5d6-b283f305b7b2) 
 
 
+**Adding Categories , tags , thumbnail , Excerpt to the post **
 
+[recording-2024-05-01-10-38-53.webm](https://github.com/pranayjain099/Unisus/assets/109263743/2f9c6ca0-4239-4552-8d1a-c42bdd26f939)
 
